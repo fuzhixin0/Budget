@@ -1,3 +1,19 @@
+
+## 目录
+---
+<!-- TOC -->
+
+- [## 目录](#-目录)
+- [## 系统地址](#-系统地址)
+- [## 接口信息](#-接口信息)
+  - [1. 账套管理](#1-账套管理)
+  - [2. 科目管理](#2-科目管理)
+  - [3. 项目管理](#3-项目管理)
+  - [4. 预算管理](#4-预算管理)
+
+<!-- /TOC -->
+
+
 ## 系统地址
 ---
 
@@ -11,7 +27,7 @@
 
 ### 1. 账套管理
 
-+ ### 账套列表
++ #### 账套列表
 
     - 界面
 
@@ -22,7 +38,7 @@
         `GetAccounts()`
 
     - 输入
-  
+
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
         | page | number | 页码 | Y |
@@ -33,9 +49,11 @@
 
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | total | int | 总数 |
+        | total | number | 总数 |
         | rows | array | 数据 |
 
         *rows定义：*
@@ -53,7 +71,7 @@
 
         ![](images/AccountList.png)
 
-+ ### 账套保存
++ #### 账套保存
 
     - 界面
 
@@ -67,8 +85,8 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | Code | string | 编码 | N |
-        | Name | string | 名称 | Y |
+        | Code | string | 账套编码 | N |
+        | Name | string | 账套名称 | Y |
         | StartDate | string | 开始时间 | N |
         | EndDate | string | 结束时间 | N |
         | DepCodes | string | 可申请部门编码 | N |
@@ -85,7 +103,7 @@
         ![](images/AccountSave.png)
 
 
-+ ### 账套编辑
++ #### 账套编辑
 
     - 界面
 
@@ -99,14 +117,16 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
+        | code | string | 账套编码 | Y |
 
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 账套编码 |
+        | Name | string | 账套名称 |
         | StartDate | string | 开始时间 |
         | EndDate | string | 结束时间 |
         | DepCodes | string | 可申请部门编码 |
@@ -119,7 +139,7 @@
 
         ![](images/AccountEdit.png)
 
-+ ### 账套删除
++ #### 账套删除
 
     - 界面位置
 
@@ -133,7 +153,7 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
+        | code | string | 账套编码 | Y |
 
     - 输出
 
@@ -147,7 +167,7 @@
 
 ### 2. 科目管理
 
-+ ### 科目列表
++ #### 科目列表
 
     - 界面位置
 
@@ -169,17 +189,19 @@
 
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | total | int | 总数 |
+        | total | number | 总数 |
         | rows | array | 数据 |
 
         *rows定义：*
 
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 科目编码 |
+        | Name | string | 科目名称 |
         | DepCode | string | 部门编码 |
         | DepName | string | 部门名称 |
         | IsUse | string | 是否启用 |
@@ -193,7 +215,7 @@
 
         ![](images/SubjectList.png)
 
-+ ### 科目保存
++ #### 科目保存
 
     - 界面位置
 
@@ -207,8 +229,8 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | Code | string | 编码 | N |
-        | Name | string | 名称 | Y |
+        | Code | string | 科目编码 | N |
+        | Name | string | 科目名称 | Y |
         | DepCode | string | 部门编码 | N |
         | DepName | string | 部门名称 | N |
         | IsUse | string | 是否启用 | N |
@@ -225,7 +247,7 @@
 
         ![](images/SubjectSave.png)
 
-+ ### 科目编辑
++ #### 科目编辑
 
     - 界面位置
 
@@ -239,14 +261,16 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
+        | code | string | 科目编码 | Y |
 
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 科目编码 |
+        | Name | string | 科目名称 |
         | DepCode | string | 部门编码 |
         | DepName | string | 部门名称 |
         | IsUse | string | 是否启用 |
@@ -260,7 +284,7 @@
 
         ![](images/SubjectEdit.png)
 
-+ ### 科目删除
++ #### 科目删除
 
     - 界面位置
 
@@ -274,7 +298,7 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
+        | code | string | 科目编码 | Y |
 
     - 输出
 
@@ -290,7 +314,7 @@
 
 ### 3. 项目管理
 
-+ ### 项目列表
++ #### 项目列表
 
     - 界面位置
 
@@ -312,17 +336,19 @@
 
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | total | int | 总数 |
+        | total | number | 总数 |
         | rows | array | 数据 |
 
         *rows定义：*
 
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 项目编码 |
+        | Name | string | 项目名称 |
         | DepCode | string | 部门编码 |
         | DepName | string | 部门名称 |
         | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
@@ -355,7 +381,7 @@
 
         ![](images/ProjectList.png)
 
-+ ### 项目保存
++ #### 项目保存
 
     - 界面
 
@@ -369,8 +395,8 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | Code | string | 编码 | N |
-        | Name | string | 名称 | Y |
+        | Code | string | 项目编码 | N |
+        | Name | string | 项目名称 | Y |
         | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；| Y |
         | ProcurementMethod | string | 采购方式：<br/> `OpenTendering` 公开招标；<br/> `SelectiveTendering` 邀请招标； | N |
         | Amount | string | 总金额 | Y |
@@ -396,7 +422,7 @@
 
         ![](images/ProjectSave.png)
 
-+ ### 项目编辑
++ #### 项目编辑
 
     - 界面
 
@@ -410,14 +436,16 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
+        | code | string | 项目编码 | Y |
         
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 项目编码 |
+        | Name | string | 项目名称 |
         | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
         | ProcurementMethod | string | 采购方式：<br/> `OpenTendering` 公开招标；<br/> `SelectiveTendering` 邀请招标； |
         | Amount | string | 总金额 |
@@ -438,7 +466,7 @@
 
         ![](images/SubjectEdit.png)
 
-+ ### 项目删除
++ #### 项目删除
 
     - 界面
 
@@ -452,7 +480,7 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
+        | code | string | 项目编码 | Y |
         
     - 输出
 
@@ -464,7 +492,7 @@
 
         ![](images/ProjectDelete.png)
 
-+ ### 项目查看
++ #### 项目查看
 
     - 界面
 
@@ -478,15 +506,17 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | code | string | 编码 | Y |
-        | type | string | 类型 | N |
+        | code | string | 项目编码 | Y |
+        | type | string | 项目类型 | N |
         
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 项目编码 |
+        | Name | string | 项目名称 |
         | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
         | ProcurementMethod | string | 采购方式：<br/> `OpenTendering` 公开招标；<br/> `SelectiveTendering` 邀请招标； |
         | Amount | string | 总金额 |
@@ -521,7 +551,7 @@
 
         ![](images/ProjectDelete.png)
 
-+ ### 项目审批
++ #### 项目审批
 
     - 界面
 
@@ -535,8 +565,8 @@
   
         | 参数名 | 类型 | 说明 | 必填 |
         | --- | --- | --- | --- |
-        | Code | string | 编码 | Y |
-        | Result | boolen | 审批结果：<br/> `true` 同意； <br/> `false` 不同意； | N |
+        | Code | string | 项目编码 | Y |
+        | Result | boolen | 审批结果：<br/> `true` 同意； <br/> `false` 不同意； | Y |
         | Notes | string | 备注 | N |
         
     - 输出
@@ -549,7 +579,7 @@
 
         ![](images/ProjectApprove.png)
 
-+ ### 项目审批记录
++ #### 项目审批记录
 
     - 界面
 
@@ -567,9 +597,11 @@
         
     - 输出
     
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | total | int | 总数 |
+        | total | number | 总数 |
         | rows | array | 数据 |
 
         *rows定义：*
@@ -577,8 +609,8 @@
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
         | ID | string | ID |
-        | Code | string | 编码 |
-        | Step | string | 步骤 |
+        | Code | string | 流程编码 |
+        | Step | string | 流程步骤 |
         | Result | boolen | 审批结果：<br/>`true` 同意；<br/>`false` 不同意； |
         | Notes | string | 说明 |
         | Creater | string | 操作人 |
@@ -592,7 +624,7 @@
 
         ![](images/ProjectFlowRecordList.png)
 
-+ ### 项目评价列表
++ #### 项目评价列表
 
     - 界面
 
@@ -614,17 +646,19 @@
         
     - 输出
     
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | total | int | 总数 |
+        | total | number | 总数 |
         | rows | array | 数据 |
 
         *rows定义：*
 
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | Code | string | 编码 |
-        | Name | string | 名称 |
+        | Code | string | 项目编码 |
+        | Name | string | 项目名称 |
         | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
         | Amount | string | 总金额 |
         | StartDate | string | 开始日期 |
@@ -641,7 +675,7 @@
 
         ![](images/ProjectFlowRecordList.png)
 
-+ ### 项目评价保存
++ #### 项目评价保存
 
     - 界面
 
@@ -672,7 +706,7 @@
 
         ![](images/EvaluationSave.png)
 
-+ ### 项目评价编辑
++ #### 项目评价编辑
 
     - 界面
 
@@ -691,10 +725,12 @@
         
     - 输出
 
+        *`Object`*
+
         | 参数名 | 类型 | 说明 |
         | --- | --- | --- |
-        | ID | string | ID |
-        | Code | string | 编码 |
+        | ID | string | 评价ID |
+        | Code | string | 项目编码 |
         | IsQualified | boolen | 评价结论 |
         | Result | string | 评价结果：<br/>`Excellent` 优；<br/>`Good` 良；<br/> `Poor` 差； |
         | Notes | string | 说明 |
@@ -705,54 +741,906 @@
 
         ![](images/EvaluationEdit.png)
 
+
 ### 4. 预算管理
 
 
-+ ### 预算项目列表
++ #### 预算项目列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetBudgetProjects()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | AccountCode | string | 账套编码 | Y |
+        | Status | string | 预算状态：<br/>`Editing` 待提交；<br/>`WaitDepApprove` 待单位负责人审批；<br/>`WaitCjApprove` 待财经所负责人审批；<br/>`WaitArrange` 待安排<br/>`Arranged` 已发布； | N |
+        | Name | string | 项目名称 | N |
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+        | statistics | object | 统计 |
+
+        *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 项目编码 |
+        | Name | string | 项目名称 |
+        | DepCode | string | 部门编码 |
+        | DepName | string | 部门名称 |
+        | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
+        | Amount | string | 总金额 |
+        | StartDate | string | 开始日期 |
+        | EndDate | string | 结束日期 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 预算版本编码 |
+        | BudgetStage | string | 预算阶段 |
+        | SubmittedAmount | number | 已报预算 |
+        | CurrentAmount | string | 当前预算 |
+        | BudgetStatus | string | 预算状态：<br/>`Editing` 待提交；<br/>`WaitDepApprove` 待单位负责人审批；<br/>`WaitCjApprove` 待财经所负责人审批；<br/>`WaitArrange` 待安排<br/>`Arranged` 已发布； |
+
+        *statistics定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | BudgetAmount | number | 本期预算总额 |
+        | ProjectCount | number | 涉及项目数 |
+        | SubmitedCount | number | 已提交数 |
+        | ApproveCount | number | 审批中数 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetBudgetProjects()`
+
+        ![](images/BudgetList.png)
 
 
-+ ### 预算项目详情
++ #### 预算项目详情
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `Detail()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | code | string | 预算编码 | N* |
+        | projectCode | string | 项目编码 | N* |
+        | accountCode | string | 账套编码 | N* |
+        | sign | string | 动作：<br/>`View` 查看；<br/>`Edit` 编制；<br/>`Approve` 审批； | N |
+        
+        【*】`Code` 预算编码有值时无需传递 `projectCode` 项目编码 和 `accountCode` 账套编码；`Code` 预算编码无值时需同时传递 `projectCode` 项目编码 和 `accountCode` 账套编码。
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 项目编码 |
+        | Name | string | 项目名称 |
+        | DepCode | string | 部门编码 |
+        | DepName | string | 部门名称 |
+        | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
+        | Amount | string | 总金额 |
+        | StartDate | string | 开始日期 |
+        | EndDate | string | 结束日期 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 预算版本编码 |
+        | BudgetStatus | string | 预算状态：<br/>`Editing` 待提交；<br/>`WaitDepApprove` 待单位负责人审批；<br/>`WaitCjApprove` 待财经所负责人审批；<br/>`WaitArrange` 待安排<br/>`Arranged` 已发布； |
+        | IsApproveShow | boolen | 审批是否显示 |
+        | Evaluation | object | 评价信息 |
+
+        *Evaluation定义：*
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | ID | string | 评价ID |
+        | Code | string | 项目编码 |
+        | IsQualified | boolen | 评价结论 |
+        | Result | string | 评价结果：<br/>`Excellent` 优；<br/>`Good` 良；<br/> `Poor` 差； |
+        | Notes | string | 说明 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `Controllers` / `BudgetController.cs` / `Detail()`
+
+        ![](images/BudgetDetail.png)
 
 
-+ ### 预算明细列表
++ #### 预算明细列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetItems()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | page | number | 页码 | Y |
+        | size | number | 每页条数 | Y |
+        | where | string | 筛选条件 | N |
+        | sortname | string | 排序字段 | N |
+        | sortorder | string | 排序方式 | N |
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+
+         *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 预算项编码 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | SubjectCode | string | 科目编码 |
+        | ItemName | string | 预算项名称 |
+        | ItemAmount | number | 预算项金额 |
+        | ItemRemark | string | 预算项说明 |
+        | SubjectName | string | 科目名称 |
+        | AccountName | string | 账套名称 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetItems()`
+
+        ![](images/BudgetItemList.png)
 
 
-+ ### 预算明细保存
++ #### 整体预算明细列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetProjectItemsAsync()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | page | number | 页码 | Y |
+        | size | number | 每页条数 | Y |
+        | projectCode | string | 项目编码 | Y |
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+
+         *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 预算项编码 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | SubjectCode | string | 科目编码 |
+        | ItemName | string | 预算项名称 |
+        | ItemAmount | number | 预算项金额 |
+        | ItemRemark | string | 预算项说明 |
+        | SubjectName | string | 科目名称 |
+        | AccountName | string | 账套名称 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetProjectItemsAsync()`
+
+        ![](images/BudgetProjectItemList.png)
 
 
-+ ### 预算明细删除
++ #### 预算明细编辑
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `ItemEdit()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | code | string | 预算项编码 | N |
+
+    - 输出
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 预算项编码 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | SubjectCode | string | 科目编码 |
+        | ItemName | string | 预算项名称 |
+        | ItemAmount | number | 预算项金额 |
+        | ItemRemark | string | 预算项说明 |
+        | SubjectName | string | 科目名称 |
+        | AccountName | string | 账套名称 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `Controllers` / `BudgetController.cs` / `ItemEdit()`
+
+        ![](images/BudgetItemEdit.png)
 
 
-+ ### 支出计划列表
++ #### 预算明细保存
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `SaveItem()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | Code | string | 预算项编码 | N |
+        | BudgetCode | boolen | 预算编码 | Y |
+        | VersionCode | string | 版本编码 | N |
+        | ItemName | string | 预算项名称 | Y |
+        | SubjectCode | string | 科目编码 | Y |
+        | ItemAmount | string | 预算项金额 | Y |
+        | ItemRemark | string | 预算项说明 | N |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `SaveItem()`
+
+        ![](images/BudgetItemSave.png)
 
 
-+ ### 支出计划保存
++ #### 预算明细删除
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `DeleteItem()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | code | string | 预算项编码 | Y |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `DeleteItem()`
+
+        ![](images/BudgetItemDelete.png)
 
 
-+ ### 支出计划删除
++ #### 支出计划列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetOutlays()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | page | number | 页码 | Y |
+        | size | number | 每页条数 | Y |
+        | where | string | 筛选条件 | N |
+        | sortname | string | 排序字段 | N |
+        | sortorder | string | 排序方式 | N |
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+
+         *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 支出编码 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | OutlayName | string | 支出名称 |
+        | PlanTime | number | 计划时间 |
+        | PlanAmount | number | 计划金额 |
+        | OutlayRemark | string | 支出说明 |
+        | AccountName | string | 账套名称 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetOutlays()`
+
+        ![](images/BudgetOutlayList.png)
 
 
-+ ### 年度目标列表
++ #### 整体支出计划列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetProjectOutlays()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | page | number | 页码 | Y |
+        | size | number | 每页条数 | Y |
+        | projectCode | string | 项目编码 | Y |
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+
+         *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 支出编码 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | OutlayName | string | 支出名称 |
+        | PlanTime | number | 计划时间 |
+        | PlanAmount | number | 计划金额 |
+        | OutlayRemark | string | 支出说明 |
+        | AccountName | string | 账套名称 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetProjectOutlays()`
+
+        ![](images/BudgetProjectOutlayList.png)
 
 
-+ ### 年度目标保存
++ #### 支出计划编辑
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `OutlayEdit()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | code | string | 支出项编码 | N |
+
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 支出项编码 |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | OutlayName | string | 支出项名称 |
+        | PlanTime | number | 计划时间 |
+        | PlanAmount | number | 计划金额 |
+        | OutlayRemark | string | 支出项说明 |
+        | AccountName | string | 账套名称 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `Controllers` / `BudgetController.cs` / `OutlayEdit()`
+
+        ![](images/BudgetOutlayEdit.png)
 
 
-+ ### 相关文件列表
++ #### 支出计划保存
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `SaveOutlay()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | Code | string | 支出项编码 | N |
+        | BudgetCode | string | 预算编码 | Y |
+        | VersionCode | string | 版本编码 | Y |
+        | OutlayName | string | 支出项名称 | Y |
+        | PlanTime | number | 计划时间 | Y |
+        | PlanAmount | number | 计划金额 | Y |
+        | OutlayRemark | string | 支出项说明 | N |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `SaveOutlay()`
+
+        ![](images/BudgetOutlaySave.png)
 
 
-+ ### 相关文件保存
++ #### 支出计划删除
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `DeleteOutlay()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | code | string | 支出项编码 | Y |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `DeleteOutlay()`
+
+        ![](images/BudgetItemDelete.png)
 
 
-+ ### 相关文件删除
++ #### 年度目标列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetGoals()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | budgetCode | string | 预算编码 | Y |
+        | versionCode | string | 版本编码 | Y |
+        
+    - 输出
+
+        *`Array`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | ID | string | 年度目标ID |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | Key | string | 年度目标键 |
+        | Name | string | 年度目标名称 |
+        | Value | string | 年度目标值 |
+        | Remark | string | 说明 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetGoals()`
+
+        ![](images/BudgetGoalsList.png)
+    
+
++ #### 整体年度目标列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `_PartialProjectGoals()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | projectCode | string | 项目编码 | Y |
+        
+    - 输出
+
+        *`Array`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 预算编码 |
+        | ProjectCode | string | 项目编码 |
+        | AccountCode | string | 账套编码 |
+        | DeptCode | string | 部门编码 |
+        | VersionCode | number | 预算版本编码 |
+        | Status | number | 预算状态 |
+        | Account | object | 账套信息 |
+        | BudgetGoals | array | 年度目标数据 |
+
+        *Account定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 账套编码 |
+        | Name | string | 账套名称 |
+        | StartDate | string | 开始时间 |
+        | EndDate | string | 结束时间 |
+
+        *BudgetGoals定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | ID | string | 年度目标ID |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | Key | string | 年度目标键 |
+        | Name | string | 年度目标名称 |
+        | Value | string | 年度目标值 |
+        | Remark | string | 说明 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `Controllers` / `BudgetController.cs` / `_PartialProjectGoals()`
+
+        ![](images/BudgetProjectGoalsList.png)
 
 
-+ ### 预算提交
++ #### 年度目标保存
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `SaveGoalsProperty()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | ID | string | 年度目标ID | N |
+        | BudgetCode | string | 预算编码 | Y |
+        | VersionCode | string | 版本编码 | Y |
+        | Key | string | 年度目标键: <br/>`Name` 名称；<br/>`Value` 值；<br/>`Remark` 说明； | Y |
+        | Name | string | 年度目标名称 | Y |
+        | Value | string | 年度目标值 | Y |
+        | Remark | string | 年度目标说明 | N |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `SaveGoalsProperty()`
+
+        ![](images/BudgetGoalsPropertySave.png)
 
 
-+ ### 预算审批
++ #### 相关文件列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `GetAttachments()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | budgetCode | string | 预算编码 | Y |
+        | versionCode | string | 版本编码 | Y |
+        
+    - 输出
+
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+
+         *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | ID | string | 文件ID |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | Name | string | 文件名称 |
+        | Path | string | 文件路径 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetAttachments()`
+
+        ![](images/BudgetAttachmentList.png)
 
 
-+ ### 预算审批记录
++ #### 整体相关文件列表
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `_PartialProjectAttachment()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | projectCode | string | 项目编码 | Y |
+        
+    - 输出
+
+        *`Array`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 预算编码 |
+        | ProjectCode | string | 项目编码 |
+        | AccountCode | string | 账套编码 |
+        | DeptCode | string | 部门编码 |
+        | VersionCode | number | 预算版本编码 |
+        | Status | number | 预算状态 |
+        | Account | object | 账套信息 |
+        | BudgetAttachments | array | 相关文件数据 |
+
+        *Account定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | Code | string | 账套编码 |
+        | Name | string | 账套名称 |
+        | StartDate | string | 开始时间 |
+        | EndDate | string | 结束时间 |
+
+        *BudgetAttachments定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | ID | string | 文件ID |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | Name | string | 文件名称 |
+        | Path | string | 文件路径 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `Controllers` / `BudgetController.cs` / `_PartialProjectAttachment()`
+
+        ![](images/BudgetProjectAttachmentList.png)
 
 
++ #### 相关文件保存
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `SaveAttachment()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | ID | string | 文件ID | N |
+        | BudgetCode | string | 预算编码 |
+        | VersionCode | string | 版本编码 |
+        | Name | string | 文件名称 |
+        | Path | string | 文件路径 |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `SaveAttachment()`
+
+        ![](images/BudgetAttachmentSave.png)
+
+
++ #### 相关文件删除
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `DeleteAttachment()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | id | string | 文件ID | Y |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `DeleteAttachment()`
+
+        ![](images/BudgetAttachmentDelete.png)
+
+
++ #### 预算提交
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `Submit()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | code | string | 预算编码 | Y |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `Submit()`
+
+        ![](images/BudgetSubmit.png)
+
+
++ #### 预算审批
+
+    - 界面
+
+        `经管平台` → `预算管理` → `预算管理`
+
+    - 方法
+
+        `Approve()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | BudgetCode | string | 预算编码 | Y |
+        | VersionCode | string | 版本编码 | Y |
+        | Result | boolen | 审批结果：<br/> `true` 同意； <br/> `false` 不同意； | Y |
+        | Notes | string | 备注 | N |
+
+    - 输出
+
+        `是否成功`
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `Approve()`
+
+        ![](images/BudgetApprove.png)
+
+
++ #### 预算审批记录
+
+    - 界面
+
+        `经管平台` → `预算管理` → `项目管理` → `项目申报` 
+
+    - 方法
+
+        `GetFlowRecords()`
+
+    - 输入
+  
+        | 参数名 | 类型 | 说明 | 必填 |
+        | --- | --- | --- | --- |
+        | where | string | 筛选条件 | Y |
+        
+    - 输出
+    
+        *`Object`*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | total | number | 总数 |
+        | rows | array | 数据 |
+
+        *rows定义：*
+
+        | 参数名 | 类型 | 说明 |
+        | --- | --- | --- |
+        | ID | string | ID |
+        | BudgetCode | string | 编码 |
+        | VersionCode | string | 版本编码 |
+        | Step | string | 流程步骤 |
+        | Result | boolen | 审批结果：<br/>`true` 同意；<br/>`false` 不同意； |
+        | Notes | string | 说明 |
+        | Creater | string | 操作人 |
+        | DepName | string | 部门 |
+        | CreateTime | string | 操作时间 |
+        | ResultDisplay | string | 审批结果显示 |
+
+    - 实现
+
+        `MCS.XZTown.Budget.Web` / `ApiControllers` / `BudgetController.cs` / `GetFlowRecords()` 
+
+        ![](images/BudgetFlowRecordList.png)
