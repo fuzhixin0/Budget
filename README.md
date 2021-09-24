@@ -659,14 +659,17 @@
         | --- | --- | --- |
         | Code | string | 项目编码 |
         | Name | string | 项目名称 |
-        | Type | string | 类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
-        | Amount | string | 总金额 |
+        | Type | string | 项目类型：<br/>`OneOff` 一次性项目；<br/> `Recurrent` 经常性项目；|
+        | TypeDescription | string | 项目类型描述：<br/> 一次性项目；<br/> 经常性项目；|
+        | Amount | string | 项目总金额 |
+        | TotalTime | string | 项目预计用时 |
         | StartDate | string | 开始日期 |
         | EndDate | string | 结束日期 |
         | DepCode | string | 部门编码 |
         | DepName | string | 部门名称 |
-        | Result | string | 评价结果：<br/>`Excellent` 优；<br/>`Good` 良；<br/> `Poor` 差； |
-        | IsQualified | boolen | 评价结论 |
+        | EvID | string | 评价ID |
+        | EvResult | string | 评价结果：<br/>`Excellent` 优；<br/>`Good` 良；<br/> `Poor` 差； |
+        | EvResultDescription | string | 评价结果描述：<br/> 优；<br/> 良；<br/> 差； |
 
 
     - 实现
